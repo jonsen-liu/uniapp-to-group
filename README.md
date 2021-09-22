@@ -1,8 +1,12 @@
 ####  uniapp-to-group
 
-`uniapp-to-group` 是 `uni-app` 开发字节小程序的时候，使用抖音团购模板的 `webpack` 转换插件（PS:此插件只在通过 `vue-cli` 创建的 `uni-app` 项目测试过）
+`uniapp-to-group` 是 `uni-app` 开发字节小程序的时候，使用抖音团购模板的 `webpack` 转换插件
+`HBuilder X` 同样适用，编辑器需要在 *3.2.3.20210825* 及以上
 
 ##### 示例
+
+`HBuilder X` 在项目跟目录添加一个 `vue.config.js` 文件
+
 
 ```javascript
   npm i uniapp-to-group -D
@@ -12,12 +16,12 @@
 
 ```javascript
   // vue.config.js
-  const UniappToProup = require('uniapp-to-group')
+  const UniappToGroup = require('uniapp-to-group')
 
   module.exports = {
   configureWebpack: {
     plugins: [
-      new UniappToProup({
+      new UniappToGroup({
         // 对应 package.json 中引入插件步骤
         package: {
           'ttPlugins': {
