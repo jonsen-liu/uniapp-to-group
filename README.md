@@ -12,7 +12,7 @@
 
 ```javascript
   // vue.config.js
-  const UniappToProup = require('uniappToProup')
+  const UniappToProup = require('uniapp-to-group')
 
   module.exports = {
   configureWebpack: {
