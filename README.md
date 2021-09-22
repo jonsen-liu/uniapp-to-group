@@ -1,6 +1,7 @@
 ####  uniapp-to-group
 
 `uniapp-to-group` 是 `uni-app` 开发字节小程序的时候，使用抖音团购模板的 `webpack` 转换插件
+
 `HBuilder X` 同样适用，编辑器需要在 *3.2.3.20210825* 及以上
 
 ##### 示例
