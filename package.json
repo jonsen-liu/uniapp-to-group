@@ -1,6 +1,6 @@
 {
   "name": "uniapp-to-group",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "uniapp开发头条小程序使用抖音团购模板的webpack转换插件",
   "main": "./src/index.js",
   "scripts": { },
@@ -8,6 +8,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonsen-liu/uniapp-to-tt-group"
+    "url": "https://github.com/jonsen-liu/uniapp-to-group"
   }
 }
