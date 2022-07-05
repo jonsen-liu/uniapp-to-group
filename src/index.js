@@ -22,12 +22,27 @@ class UniappToProup {
         }
         if (name === 'app.json') {
           let appJson = JSON.parse(compilation.assets[name].source())
-          if (this.app.pages) {
-            appJson.pages = appJson.pages.concat(this.app.pages)
-          }
-          if (Object.keys(this.app.fallbackPluginPages).length) {
-            const obj = appJson.fallbackPluginPages || {}
-            appJson.fallbackPluginPages = Object.assign(obj, this.app.fallbackPluginPages)
+
+          for (const key in this.app) {
+            if (appJson[key]) {
+              if (
+                Object.prototype.toString.call(appJson[key]) === '[object Object]' &&
+                Object.prototype.toString.call(this.app[key]) === '[object Object]'
+              ) {
+                appJson[key] = {
+                  ...appJson[key],
+                  ...this.app[key]
+                }
+              }
+              if (
+                Array.isArray(appJson[key]) &&
+                Array.isArray(this.app[key])
+              ) {
+                appJson[key] = appJson.pages.concat(this.app[key])
+              }
+            } else {
+              appJson[key] = this.app[key]
+            }
           }
 
           compilation.assets[name] = {

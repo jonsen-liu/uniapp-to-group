@@ -34,15 +34,17 @@
             }
           }
         },
+        /**
+         * app 中可以是任何字段，插件会将字段和app.json对比，有就合并字段，没有就添加字段
+         * 合并字段 目前只处理 Array 和 Object 类型(注：[]和{}才会合并， null 类型不会合并)
+         * Object 类型字段合并，在key相同的情况会覆盖value
+         * Array 类型合并 是将两个数组合并
+        */
         app: {
           'pages': [
             // 手动配置商品插件中的商品详情页面
             'ext://poi-group-buy-plugin/detail'
-          ],
-          'fallbackPluginPages': {
-            // 这里的 key 是小程序原来的商品详情页（下面只是示意），value 可以就用这个值
-            'product/detail/index': 'ext://poi-group-buy-plugin/detail'
-          }
+          ]
         }
       })
     ]

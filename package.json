@@ -1,6 +1,6 @@
 {
   "name": "uniapp-to-group",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "uniapp开发头条小程序使用抖音团购模板的webpack转换插件",
   "main": "./src/index.js",
   "scripts": { },
